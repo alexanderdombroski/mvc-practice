@@ -11,7 +11,6 @@ const staticPaths = [
 const configureStaticPaths = (app) => {
     staticPaths.forEach((path) => {
         app.use(path.route, express.static(path.dir));
-        console.log(`Configured static path: ${path.route} -> ${path.dir}`);
     });
 };
 
